@@ -48,20 +48,21 @@ while 1:
 	if squoze:
 		spam_update()
 		squoze = True
-	else:
-		now = datetime.datetime.now()
-		if now.minute == 0:
-			if hour == False:				
-					send_message("Hourly update: Not Squoze \U0001F48E\U0001F64F")
-					hour = True
-		else:
-			hour = False
-		if now.second == 0:
-			if log_minute == False:
-				write_log(now)
-				log_minute = True
-		else:
-			log_minute = False
+# Once an hour was getting annoying
+#	else:
+#		now = datetime.datetime.now()
+#		if now.minute == 0:
+#			if hour == False:				
+#					send_message("Hourly update: Not Squoze \U0001F48E\U0001F64F")
+#					hour = True
+#		else:
+#			hour = False
+#		if now.second == 0:
+#			if log_minute == False:
+#				write_log(now)
+#				log_minute = True
+#		else:
+#			log_minute = False
 	time.sleep(1)
 
 
